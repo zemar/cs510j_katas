@@ -7,10 +7,16 @@ package edu.pdx.cs410J.hsquared;
  * class (and its tests).
  */
 public class Kata {
-                                                                                    
+  public static String compute(String x) {
+    String result = "";
+    result = x;
+
+    return result;
+  }
 
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    String result = compute("1");
+    System.out.println(result);
     System.exit(1);
   }
 }
