@@ -15,8 +15,13 @@ public class Kata {
   }
 
   public static void main(String[] args) {
-    String result = compute("1");
+    if (args.length == 0) {
+      System.err.println("Missing command line arguments");
+      System.exit(1);
+    }
+    String input = args[0];
+    String result = compute(input);
     System.out.println(result);
-    System.exit(1);
+    System.exit(0);
   }
 }
