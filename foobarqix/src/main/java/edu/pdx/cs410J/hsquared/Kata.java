@@ -8,8 +8,18 @@ package edu.pdx.cs410J.hsquared;
  */
 public class Kata {
   public static String compute(String x) {
+    int i = Integer.parseInt(x);
     String result = "";
-    result = x;
+
+    if (i % 3 == 0) {
+      result += "Foo";
+    }
+    if (i % 5 == 0) {
+      result += "Bar";
+    }
+    if (i % 7 == 0) {
+      result += "Qix";
+    }
 
     return result;
   }
