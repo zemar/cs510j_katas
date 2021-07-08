@@ -22,9 +22,27 @@ class KataIT extends InvokeMainTestCase {
   }
 
   @Test
-  void invokingMainNumber() {
+  void invokingMainNumber7() {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "7");
     assertThat(result.getExitCode(), equalTo(0));
-    assertThat(result.getTextWrittenToStandardOut(), equalTo("7\n"));
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Qix\n"));
+  }
+  @Test
+  void invokingMainNumber4() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "4");
+    assertThat(result.getExitCode(), equalTo(0));
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("4\n"));
+  }
+  @Test
+  void invokingMainNumber3() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "3");
+    assertThat(result.getExitCode(), equalTo(0));
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Foo\n"));
+  }
+  @Test
+  void invokingMainNumber21() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "21");
+    assertThat(result.getExitCode(), equalTo(0));
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("FooQix\n"));
   }
 }
