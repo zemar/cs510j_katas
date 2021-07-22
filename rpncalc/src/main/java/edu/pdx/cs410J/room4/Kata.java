@@ -19,11 +19,32 @@ public class Kata {
         int argInt = Integer.parseInt(arg);
         stack.push(argInt);
       } catch (Exception e) {
-        if (!arg.matches("\\+|\\-|\\*")) {
+        if (!arg.matches("\\+|-|\\*|/")) {
           System.err.println("Unexpected operator");
           System.exit(1);
         }
-        // now my arg is a operator
+        int operand1 = stack.pop();
+        int operand2 = stack.pop();
+        int result = 0;
+        switch (arg) {
+          case "+":
+            result = operand1 + operand2;
+            stack.push(result);
+            break;
+          case "-":
+            result = operand1 - operand2;
+            stack.push(result);
+            break;
+          case "*":
+            result = operand1 * operand2;
+            stack.push(result);
+            break;
+          case "/":
+            result = operand1 / operand2;
+            stack.push(result);
+            break;
+        }
+
       }
       System.out.println("My arg is: " + arg);
     }
